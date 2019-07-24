@@ -17,11 +17,11 @@ export class NameStore extends Store<NameState> {
     super(createInitialName());
   }
  
-  setName(name: string) {
+  public setName(name: string) {
     this.update({name});
   }
  
-  resetName() {
+  public resetName() {
     this.update(createInitialName());
   }
  
