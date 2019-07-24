@@ -11,19 +11,19 @@ import * as fromNameActions from '../../store/name.actions';
 })
 export class SetNameComponent implements OnInit {
 
-  constructor(private Store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
   }
 
   public setName(name: string) {
     const action = new fromNameActions.SetName(name);
-    this.Store.dispatch(action);
+    this.store.dispatch(action);
   }
 
   public resetName() {
     const action = new fromNameActions.ResetName();
-    this.Store.dispatch(action);
+    this.store.dispatch(action);
   }
 
 }

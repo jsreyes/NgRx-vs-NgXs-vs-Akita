@@ -16,11 +16,6 @@ export function NameReducer(state = initialState, action: fromNameActions.nameAc
         name: action.name,
       };
 
-    case fromNameActions.GET_NAME:
-      return {
-        ...state,
-      };
-
     case fromNameActions.RESET_NAME:
       return {
         ...state,

@@ -26,11 +26,8 @@ export class GetNameComponent implements OnInit {
 
   public subscribeToName() {
     this.subscriptionToName = this.store.select('name').subscribe((nameState: NameState) => {
-      if(nameState.name) {
         this.name = nameState.name;
-      } else {
-        this.name = '';
-      }
+ 
     });
   }
 
