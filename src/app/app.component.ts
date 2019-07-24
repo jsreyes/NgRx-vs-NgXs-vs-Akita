@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'NgRx-NgXs-Akita';
+  title = 'NgRx Concept Test';
 }
