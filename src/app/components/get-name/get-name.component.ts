@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./get-name.component.sass']
 })
 export class GetNameComponent implements OnInit {
-  @Select(state => state.names)
+  @Select(state => state.name)
   name$: Observable<NameStateModel>;
 
   constructor() { }

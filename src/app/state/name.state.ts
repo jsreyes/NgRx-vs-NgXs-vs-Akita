@@ -2,34 +2,34 @@ import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { SetName, ResetName } from '../actions/name.actions';
 
 export class NameStateModel {
-    names: string[];
+    name: string;
 }
 
 @State<NameStateModel>({
-    name: 'names',
+    name: 'name',
     defaults: {
-        names: []
+        name: ''
     }
 })
 export class NameState {
 
     @Selector()
     static getUsers(state: NameStateModel) {
-        return state.names;
+        return state.name;
     }
 
     @Action(SetName)
     SetName({getState, patchState }: StateContext<NameStateModel>, { payload }: SetName) {
         const state = getState();
         patchState({
-            names: [...state.names, payload]
+            name: payload
         });
     }
 
     @Action(ResetName)
     ResetName({patchState }: StateContext<NameStateModel>) {
         patchState({
-            names: []
+            name: ''
         });
     }
 }
