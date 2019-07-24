@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AppState } from 'app/store/app.reducer';
+import { Store } from '@ngrx/store';
+import { NameState } from 'app/store/name.reducer';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-get-name',
@@ -7,9 +11,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetNameComponent implements OnInit {
 
-  constructor() { }
+  public name: string;
+  private subscriptionToName: Subscription;
+
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
+    this.subscribeToName();
   }
+
+  ngOnDestroy() {
+    this.subscriptionToName.unsubscribe();
+  }
+
+  public subscribeToName() {
+    this.subscriptionToName = this.store.select('name').subscribe((nameState: NameState) => {
+      if(nameState.name) {
+        this.name = nameState.name;
+      } else {
+        this.name = '';
+      }
+    });
+  }
+
+
+  
+
+  
 
 }
