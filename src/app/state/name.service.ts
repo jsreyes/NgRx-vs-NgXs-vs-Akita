@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NameStore } from '../state/name.store';
+import { NameStore } from './name.store';
  
 @Injectable({
   providedIn: 'root'
