@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, Select } from '@ngxs/store';
-import { NameState, NameStateModel } from '../../state/name.state';
-import { SetName, ResetName } from '../../actions/name.actions';
+import { Store } from '@ngxs/store';
+import * as MyActions from '../../actions/name.actions';
 
 @Component({
   selector: 'app-set-name',
@@ -18,10 +17,10 @@ export class SetNameComponent implements OnInit {
   }
 
   setName(user: string) {
-    this.store.dispatch(new SetName(user));
+    this.store.dispatch(new MyActions.SetName(user));
   }
 
   resetName() {
-    this.store.dispatch(new ResetName());
+    this.store.dispatch(new MyActions.ResetName());
   }
 }
