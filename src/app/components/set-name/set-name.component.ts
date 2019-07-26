@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
-import * as MyActions from '../../actions/name.actions';
+import * as MyActions from '../../store/name.actions';
 
 @Component({
   selector: 'app-set-name',

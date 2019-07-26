@@ -1,5 +1,5 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
-import { SetName, ResetName } from '../actions/name.actions';
+import { SetName, ResetName } from '../store/name.actions';
 
 export interface NameStateModel {
     name: string;

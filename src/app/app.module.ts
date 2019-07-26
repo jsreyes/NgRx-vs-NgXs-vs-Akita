@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SetNameComponent } from './components/set-name/set-name.component';
 import { GetNameComponent } from './components/get-name/get-name.component';
-import { NameState } from './state/name.state';
+import { NameState } from './store/name.state';
 
 @NgModule({
   declarations: [

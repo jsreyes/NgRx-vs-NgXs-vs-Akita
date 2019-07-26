@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Select } from '@ngxs/store';
-import { NameStateModel } from 'src/app/state/name.state';
+import { NameStateModel } from 'src/app/store/name.state';
 import { Observable } from 'rxjs';
 
 @Component({
