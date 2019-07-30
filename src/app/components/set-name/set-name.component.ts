@@ -7,14 +7,11 @@ import * as MyActions from '../../store/name.actions';
   templateUrl: './set-name.component.html',
   styleUrls: ['./set-name.component.sass']
 })
-export class SetNameComponent implements OnInit {
+export class SetNameComponent {
 
   constructor(
     private store: Store
   ) { }
-
-  ngOnInit() {
-  }
 
   setName(user: string) {
     this.store.dispatch(new MyActions.SetName(user));

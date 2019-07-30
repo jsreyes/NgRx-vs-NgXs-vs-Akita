@@ -14,7 +14,7 @@ export interface NameStateModel {
 export class NameState {
 
     @Selector()
-    static getUsers(state: NameStateModel) {
+    static getName(state: NameStateModel) {
         return state.name;
     }
 

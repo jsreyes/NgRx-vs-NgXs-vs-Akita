@@ -8,13 +8,10 @@ import { Observable } from 'rxjs';
   templateUrl: './get-name.component.html',
   styleUrls: ['./get-name.component.sass']
 })
-export class GetNameComponent implements OnInit {
+export class GetNameComponent {
   @Select(state => state.name)
   name$: Observable<NameStateModel>;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
